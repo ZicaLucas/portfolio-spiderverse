@@ -196,20 +196,3 @@ body {
   50%      { transform: scale(1.08); opacity: 0.88; }
 }
 
-/* ACESSIBILIDADE */
-@media (prefers-reduced-motion: reduce) {
-  #teia-raios,
-  #teia-aneis,
-  .cidade__nome,
-  .cidade__nome::before,
-  .cidade__nome::after,
-  .cidade__tag,
-  .cidade__tag::before,
-  .cidade__tag::after,
-  #btn-entrar::before,
-  #btn-entrar::after,
-  #portal.ativo #portal-aneis,
-  #portal.ativo #portal-aneis2,
-  #portal.ativo #portal-raios,
-  #portal.ativo #portal-nucleo { animation: none; }
-}
