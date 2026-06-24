@@ -253,6 +253,19 @@ a { color: inherit; text-decoration: none; }
 
 .card__desc { font-size: 14px; color: var(--cinza); }
 
+/* link "Ver projeto" dentro do card (só aparece em projetos com link) */
+.card__link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--fonte-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--ciano);
+  text-transform: uppercase;
+}
+.card__link:hover { color: var(--magenta); }
+
 /* CONTATO + FOOTER */
 .contato__links {
   display: flex;

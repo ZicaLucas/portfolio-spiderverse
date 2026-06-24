@@ -9,6 +9,7 @@ PROJETOS.forEach((p) => {
     <span class="card__tag">${p.tag}</span>
     <h3 class="card__title">${p.titulo}</h3>
     <p class="card__desc">${p.descricao}</p>
+    ${p.link ? `<a href="${p.link}" class="card__link" target="_blank" rel="noopener">Ver projeto →</a>` : ""}
   `;
   grid.appendChild(card);
 });
