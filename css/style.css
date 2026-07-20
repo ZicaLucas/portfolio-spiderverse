@@ -502,9 +502,8 @@ a {
   border-top: 16px solid #fff;
 }
 
-/* sua imagem */
 .sobre__avatar {
-  width: 180px;
+  width: 300px;
   height: auto;
   border-radius: 12px;
 }
