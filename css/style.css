@@ -502,8 +502,64 @@ a {
   border-top: 16px solid #fff;
 }
 
-.sobre__avatar {
+/* AVATAR COM GLITCH (três camadas sobrepostas) */
+.avatar-glitch {
+  position: relative;
   width: 300px;
   height: auto;
-  border-radius: 12px;
+  margin: 0 auto;
+}
+.avatar-glitch img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* as cópias coloridas ficam sobre a base, no mesmo lugar */
+.avatar-glitch__r,
+.avatar-glitch__c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;   /* deixa o preto transparente, só a cor aparece */
+}
+/* tinge cada cópia de uma cor */
+.avatar-glitch__r { filter: url(#tint-red);  }
+.avatar-glitch__c { filter: url(#tint-cyan); }
+
+/* cópias invisíveis quando parado; glitcham ao passar o mouse */
+.avatar-glitch__r,
+.avatar-glitch__c { opacity: 0; }
+
+.avatar-glitch:hover .avatar-glitch__r {
+  animation: avatar-r 0.4s infinite steps(2);
+  opacity: 0.85;
+}
+.avatar-glitch:hover .avatar-glitch__c {
+  animation: avatar-c 0.4s infinite steps(2);
+  opacity: 0.85;
+}
+.avatar-glitch:hover .avatar-glitch__base {
+  animation: avatar-base 0.4s infinite steps(2);
+}
+
+@keyframes avatar-r {
+  0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+  50% { transform: translate(-5px, 4px); opacity: 0.85; }
+}
+@keyframes avatar-c {
+  0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+  50% { transform: translate(5px, -4px); opacity: 0.85; }
+}
+@keyframes avatar-base {
+  0%, 100% { transform: translate(0, 0); }
+  45% { transform: translate(1px, 0); }
+  70% { transform: translate(-1px, 0); }
+}
+
+/* respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .avatar-glitch__r,
+  .avatar-glitch__c,
+  .avatar-glitch__base { animation: none; }
+  .avatar-glitch__r, .avatar-glitch__c { opacity: 0; }
 }

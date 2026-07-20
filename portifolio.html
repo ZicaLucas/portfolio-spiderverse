@@ -17,6 +17,18 @@
 
 <body>
 
+  <!-- filtros que tingem o avatar de vermelho e ciano para o glitch -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="tint-red">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="tint-cyan">
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+    </filter>
+  </defs>
+</svg>
+
   <!-- HEADER / NAV -->
   <header class="nav">
     <a href="#" class="nav__logo glitch" data-text="SN">LZ</a>
@@ -55,10 +67,15 @@
           para descobrir onde quero me aprofundar — e cada projeto aqui faz parte dessa jornada.
         </p>
       </div>
-      
-      <img class="sobre__avatar" src="assets/mini-eu.png" alt="Ilustração de Lucas Zica no estilo Aranhaverso" />
-    </div>
-  </section>S
+
+      <!-- avatar com efeito glitch: três cópias da mesma imagem sobrepostas -->
+      <div class="avatar-glitch">
+        <img src="assets/mini-eu.png" alt="Ilustração de Lucas Zica no estilo Aranhaverso"
+          class="avatar-glitch__base" />
+        <img src="assets/mini-eu.png" alt="" aria-hidden="true" class="avatar-glitch__r" />
+        <img src="assets/mini-eu.png" alt="" aria-hidden="true" class="avatar-glitch__c" />
+      </div>
+  </section>
 
   <!-- PROJETOS -->
   <section id="projetos" class="section">
