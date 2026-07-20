@@ -2,7 +2,7 @@ const PROJETOS = [
   {
     tag: "PROJETO FULL-STACK · EM EQUIPE",
     titulo: "FARM",
-    descricao: "Plataforma que conecta pequenos produtores rurais diretamente a compradores, sem intermediários, com divulgação de produtos, negociação, gestão de vendas e controle de estoque. Desenvolvida em C# com banco de dados SQL. Projeto em equipe, atualmente em desenvolvimento.",
+    descricao: "Plataforma que conecta pequenos produtores rurais diretamente a compradores, sem intermediários, com divulgação de produtos, negociação, gestão de vendas e controle de estoque. Desenvolvida em C# com banco de dados SQL.",
     link: "https://farm2026.onrender.com/Usuarios/Login",
   },
   {
