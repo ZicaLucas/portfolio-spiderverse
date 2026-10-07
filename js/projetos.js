@@ -18,7 +18,7 @@ const PROJETOS = [
     link: "https://zicalucas.github.io/visual-cyberpunk/",
   },
   {
-    tag: "PROJETO PESSOAL · FRONT-END",
+    tag: "PROJETO FRONT-END · SOLO",
     titulo: "IRMINSUL",
     descricao: "Analisador de builds e times de Genshin Impact: avalia artefatos, substats, recarga de energia, constelações e sinergia da equipe, e ainda calcula o DPS da composição. Base com 121 personagens. Desenvolvido em React, sem etapa de build. Projeto pessoal.",
     link: "https://zicalucas.github.io/Analisador-build-Genshin/",
